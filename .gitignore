@@ -62,6 +62,9 @@ sysinfo.txt
 # tmp Art w/ Krita
 *.kra~
 
+# Useless (maybe) things
+plastic-free-society-game/[Aa]ssets/VIDE/Resources/EditorSettings.json
+
 # Crashlytics generated file
 crashlytics-build.properties
 
