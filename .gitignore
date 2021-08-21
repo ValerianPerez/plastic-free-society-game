@@ -23,6 +23,9 @@ plastic-free-society-game/[Aa]ssets/Plugins/Editor/JetBrains*
 .vs/
 .vsconfig
 
+# Rider configuration
+.idea
+
 # Gradle cache directory
 .gradle/
 
