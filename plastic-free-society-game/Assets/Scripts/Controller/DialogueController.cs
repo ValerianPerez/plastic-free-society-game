@@ -35,13 +35,19 @@ public class DialogueController : MonoBehaviour
 
     public void SetWindow(PresentationTemplate presentation)
     {
-        this.CharacterPortrait = presentation.Portrait;
+        this.CharacterPortrait.sprite = presentation.Portrait;
         this.Descritpion.text = presentation.Description;
 
         for (int i = 0; i < choices.Count; i++)
         {
-            choices[i].Title.text = presentation.choices[i].Title;
-            choices[i].Description.text = presentation.choices[i].Description;
+            bool isDisplayble = i < presentation.choices.Count;
+            choices[i].gameObject.SetActive(isDisplayble);
+
+            if (isDisplayble)
+            {
+                choices[i].Title.text = presentation.choices[i].Title;
+                choices[i].Description.text = presentation.choices[i].Description;
+            }
         }
     }
 

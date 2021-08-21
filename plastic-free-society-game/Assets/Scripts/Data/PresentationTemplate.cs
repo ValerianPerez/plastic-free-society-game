@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using UnityEngine.UI;
+using UnityEngine;
 
 public class PresentationTemplate
 {
     public string Description { get; set; }
-    public Image Portrait{ get; set; }
+    public Sprite Portrait{ get; set; }
 
     public List<ChoiceTemplate> choices { get; set; }
 

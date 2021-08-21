@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using VIDE_Data; //Import this to use VIDE Dialogue's VD class
 
 public class DialogueManager : MonoBehaviour
@@ -48,6 +49,7 @@ public class DialogueManager : MonoBehaviour
         if (!data.isPlayer)
         {
             this.template.Description = data.comments[data.commentIndex];
+            this.template.Portrait = data.sprites[data.commentIndex];
             VD.Next();
         } else {
             for (int i = 0; i < data.comments.Length; i++)
