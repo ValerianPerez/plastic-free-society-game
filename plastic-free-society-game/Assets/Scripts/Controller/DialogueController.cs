@@ -13,11 +13,24 @@ public class DialogueController : MonoBehaviour
 
     [SerializeField]
     private List<ButtonChoiceController> choices;
+
+    [SerializeField]
+    private DialogueManager dialogueManager;
+
     #endregion
+
+    #region Unity Built-In
+    private void Start()
+    {
+        this.dialogueManager.DialogueController = this;
+    }
+    #endregion
+
+    #region Methods
 
     public void MakeChoice(int number)
     {
-        
+        this.dialogueManager.MakeChoice(number);
     }
 
     public void SetWindow(PresentationTemplate presentation)
@@ -31,4 +44,11 @@ public class DialogueController : MonoBehaviour
             choices[i].Description.text = presentation.choices[i].Description;
         }
     }
+
+    public void SetVisible(bool isVisible)
+    {
+        this.transform.gameObject.SetActive(isVisible);
+    }
+    #endregion
+
 }
