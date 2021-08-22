@@ -348,7 +348,6 @@ namespace cakeslice
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log("hit");
                 Transform objectHit = hit.transform;
                 Outline outline = objectHit.GetComponent<Outline>();
                 if (outline != null)
